@@ -3,20 +3,22 @@ import { FormField } from "@sanity/base/components";
 import { TextInput, Select } from "@sanity/ui";
 import PatchEvent, { set } from "@sanity/form-builder/PatchEvent";
 
-const time = [
-  { title: "Minutes", value: "minutes" },
-  { title: "Hours", value: "hours" },
+const measurements = [
+  { title: "Cups", value: "cups" },
+  { title: "Tablespoons", value: "tbs" },
+  { title: "Teaspoons", value: "tsp" },
+  { title: "Sprinkle", value: "sprinkle" },
 ];
 
 const createPatchFrom = (value) =>
   PatchEvent.from(value === {} ? unset() : set(value));
 
-const PreparationTime = forwardRef(
+const IngredientAmount = forwardRef(
   ({ type: { description, title }, value, onChange }, ref) => {
     const unitsRef = useRef();
 
     const [localValue, setLocalValue] = useState(
-      value ? { ...value } : { value: "", unit: time[0].value }
+      value ? { ...value } : { value: "", unit: measurements[0].value }
     );
 
     const handleChange = (inputValue, selectValue) => {
@@ -51,7 +53,7 @@ const PreparationTime = forwardRef(
           ref={unitsRef}
           onChange={(event) => handleChange(undefined, event.target.value)}
         >
-          {time.map((x, index) => (
+          {measurements.map((x, index) => (
             <option key={index} value={x.value}>
               {x.title}
             </option>
@@ -62,4 +64,4 @@ const PreparationTime = forwardRef(
   }
 );
 
-export default PreparationTime;
+export default IngredientAmount;

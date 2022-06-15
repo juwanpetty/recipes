@@ -1,4 +1,5 @@
 import PreparationTime from "../components/PreparationTime";
+import IngredientAmount from "../components/IngredientAmount";
 
 const measurements = [
   { title: "Cups", value: "cups" },
@@ -84,11 +85,6 @@ export default {
       ],
     },
     {
-      name: "servings",
-      title: "Servings",
-      type: "number",
-    },
-    {
       name: "ingredientGroup",
       title: "Ingredient Group",
       type: "array",
@@ -117,6 +113,7 @@ export default {
                       name: "amount",
                       title: "Amount",
                       type: "object",
+                      inputComponent: IngredientAmount,
                       fields: [
                         {
                           name: "value",
@@ -168,6 +165,18 @@ export default {
           title: "Note",
           type: "object",
           fields: [
+            {
+              name: "ingredient",
+              title: "Ingredient",
+              type: "reference",
+              to: { type: "ingredient" },
+            },
+            {
+              name: "ingredientPicker",
+              title: "Ingredient Picker",
+              type: "string",
+              inputComponent: IngredientPicker,
+            },
             {
               name: "content",
               title: "Content",
