@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { BellIcon } from "@heroicons/react/outline";
 
+import { ThemeSwitcher } from "components";
 import styles from "./Navigation.module.scss";
 
 type NavigationProps = {};
@@ -115,12 +115,7 @@ const Navigation = (props: NavigationProps) => {
             ))}
           </nav>
 
-          <div className={styles.themeContainer}>
-            <button type="button">
-              <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" />
-            </button>
-          </div>
+          <ThemeSwitcher />
         </div>
       </div>
     </div>
