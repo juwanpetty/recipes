@@ -1,194 +1,238 @@
-.container {
+.pageContainer {
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 3rem;
-  row-gap: 6rem;
-  padding: 0 2rem;
+  max-width: 1120px;
+  padding: 0 32px;
+}
+
+.pageWrapper {
+  margin: 120px 0;
+  // display: flex;
+  // flex-direction: column;
+  // row-gap: 96px;
+}
+
+.pageHeader {
+  margin-bottom: 96px;
+}
+
+.breadcrumbsContainer {
+  margin-bottom: 8px;
+
+  .breadcrumbsList {
+    display: flex;
+  }
+
+  .breadcrumbsLink {
+    font-family: "IBM Plex Mono";
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .breadcrumbsLinkRoot {
+    opacity: 0.6;
+  }
+
+  .breadcrumbsDividerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+
+    .breadcrumbsDivider {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      font-weight: 500;
+    }
+  }
+}
+
+.pageHeading {
+  margin-bottom: 64px;
+
+  .pageTitle {
+    margin-bottom: 12px;
+    font-family: "Quincy CF";
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .pageDescription {
+    width: 75ch;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+.pageMeta {
+  .metaList {
+    display: flex;
+    column-gap: 32px;
+  }
+
+  .metaListItem {
+    h2 {
+      margin-bottom: 4px;
+      font-family: "IBM Plex Mono";
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
 }
 
 .contentContainer {
-  padding-left: 32px;
-  padding-right: 32px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0px auto;
-}
-
-.wrapper {
-  margin: 120px 0;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 6rem;
 }
 
-.meta {
-  // grid-column: 1 / 4;
-  // margin-top: 5rem;
+.asideContent {
+  flex: 0 0 24%;
 
-  // display: grid;
-  // grid-template-columns: 2fr 1fr;
-  // column-gap: 3rem;
-  flex: 0 0 100%;
-}
-
-.metaInformation {
-  display: flex;
-  column-gap: 32px;
-}
-
-.metaItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+  .asideTitle {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 16px;
   }
 }
 
-.back {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.ingredientGroup {
+  margin-bottom: 40px;
 
-  svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 4px;
+  .ingredientGroupHeading {
+    // font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
   }
 }
 
-.title {
-  margin-bottom: 1rem;
-  font-size: 40px;
-}
-
-.description {
-  width: 56ch;
-  margin-bottom: 3rem;
-}
-
-.sectionTitle {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.content {
-  max-width: 535px;
-  margin: 0px 24px;
-  flex-shrink: 1.5;
-}
-
-.stepList {
-  margin-bottom: 5rem;
-}
-
-.stepItem {
-  counter-increment: step-counter;
-  display: flex;
-  margin-bottom: 2rem;
-
-  &::before {
-    content: counter(step-counter);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1rem;
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    min-height: 40px;
-    border-radius: 100%;
-    border: 1px solid #d0cecb;
-    color: #544839;
-  }
-}
-
-.step {
-  width: 65ch;
-  align-self: center;
-}
-
-.ingredients {
-  max-width: 275px;
-  padding: 0 24px;
-}
-
-.ingredientsList {
-}
-
-.ingredientsItem {
-  counter-increment: ingredient-counter;
-  display: flex;
-  margin-bottom: 1rem;
-
-  &::before {
-    content: counter(ingredient-counter);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1rem;
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    min-height: 40px;
-    border-radius: 100%;
-    border: 1px solid #d0cecb;
-    color: #544839;
+.ingredientList {
+  .ingredientListItem {
+    margin-bottom: 16px;
   }
 }
 
 .ingredient {
-  align-self: center;
-}
+  white-space: nowrap;
+  font-size: 15px;
 
-.notes {
-  margin-bottom: 5rem;
-}
+  .ingredientQuantity {
+    margin-right: 8px;
 
-.note {
-  width: 100%;
-  padding: 24px;
-  padding-left: 48px;
-  position: relative;
-  border: 1px solid black;
+    font-family: "IBM Plex Mono";
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 13px;
 
-  .ingredientNote {
-    font-weight: 700;
+    &:empty {
+      margin-right: 0;
+    }
   }
 
-  svg {
-    width: 24px;
-    height: 24px;
+  .ingredientModifier {
+    // font-family: "Quincy CF";
+    font-style: italic;
+    opacity: 0.6;
+  }
+}
+
+.mainContent {
+  flex: 0 0 56%;
+  margin: 0 auto 0 4.5em;
+
+  .mainTitle {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
+
+.preparationContainter {
+  margin-bottom: 56px;
+}
+
+.preparationList {
+  .preparationListItem {
+    // display: flex;
+    margin-bottom: 32px;
+    counter-increment: step-counter;
+
+    // &::before {
+    //   content: counter(step-counter);
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   margin-right: 16px;
+    //   width: 32px;
+    //   min-width: 32px;
+    //   height: 32px;
+    //   min-height: 32px;
+    //   border-radius: 100%;
+    //   border: 2px solid black;
+    //   font-size: 14px;
+    //   font-weight: 500;
+    // }
+  }
+
+  .preparationHeading {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .preparationText {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+.noteContainer {
+  .noteTitle {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
+
+.noteList {
+  .noteListItem {
+    position: relative;
+    width: 56ch;
+    padding: 24px;
+    padding-left: 48px;
+    margin-bottom: 48px;
+    background: #f7f7f7;
+    border-radius: 6px;
+  }
+
+  .noteIcon {
     position: absolute;
-    top: 24px;
-    left: 16px;
+    top: 27px;
+    left: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
-}
 
-.controls {
-  margin-bottom: 3rem;
-}
+  .noteText {
+    font-size: 16px;
+    line-height: 1.7;
 
-.button {
-  padding: 6px 20px;
-  border: 1px solid black;
-  border-radius: 6px;
-  font-weight: 700;
-}
-
-.ingredientName {
-  font-weight: 700;
-}
-
-.ingredientState {
-  font-style: italic;
-  display: block;
+    .noteIngredient {
+      font-weight: 500;
+    }
+  }
 }

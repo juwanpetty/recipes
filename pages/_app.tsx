@@ -1,6 +1,7 @@
-import React from "react";
-import type { AppProps } from "next/app";
 import { Layout } from "components";
+import type { AppProps } from "next/app";
+import React from "react";
+
 import "../styles/styles.scss";
 
 if (typeof window !== "undefined" && process.env.NODE_ENV !== "production") {

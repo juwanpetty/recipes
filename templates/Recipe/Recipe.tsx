@@ -1,135 +1,299 @@
+import { InformationCircleIcon } from "@heroicons/react/outline";
+import classNames from "classnames";
+import Link from "next/link";
 import React from "react";
-import {
-  BookOpenIcon,
-  InformationCircleIcon,
-  UserGroupIcon,
-  ChevronLeftIcon,
-} from "@heroicons/react/solid";
 
 import styles from "./Recipe.module.scss";
 
-type RecipeProps = {};
-
-const Recipe = (props: RecipeProps) => {
+const Recipe = () => {
   return (
-    <div className={styles.contentContainer}>
-      <div className={styles.wrapper}>
-        <div className={styles.meta}>
-          <header>
-            <h1 className={styles.title}>Chocolate chip cookies</h1>
-            <p className={styles.description}>
-              Divuldge in these incredibly moist, sticky chocolate chip cookies.
-              They will literally melt in your mouth. And the best part is it
-              only takes 10 minutes to cook.
-            </p>
-            <div className={styles.metaInformation}>
-              <span className={styles.metaItem}>
-                <BookOpenIcon /> Easy to make
-              </span>
-              <span className={styles.metaItem}>
-                <UserGroupIcon /> Serves 3/4
-              </span>
-            </div>
-          </header>
-        </div>
-
-        <div className={styles.backSection}>
-          <a href="#" className={styles.back}>
-            <ChevronLeftIcon />
-            Back
-          </a>
-        </div>
-
-        <main className={styles.content}>
-          <h1 className={styles.sectionTitle}>Steps</h1>
-          <ul className={styles.stepList}>
-            <li className={styles.stepItem}>
-              <p className={styles.step}>
-                Preheat oven to 375 degrees F (190 degrees C).
-              </p>
-            </li>
-            <li className={styles.stepItem}>
-              <p className={styles.step}>
-                Brush butter lightly over squash halves. Cover with aluminum.
-              </p>
-            </li>
-            <li className={styles.stepItem}>
-              <p className={styles.step}>
-                Bake in the preheated oven until easily pierced with a fork,
-                about 40 minutes. Cool until easily handled, about 15 minutes.
-              </p>
-            </li>
-            <li className={styles.stepItem}>
-              <p className={styles.step}>
-                Preheat a large skillet over medium heat. Add ground beed; cook
-                and stir until browned, about 5 minutes. Stire in tomatoes,
-                mushrooms, red onion, green bell pepper, garlic, oregano, basil,
-                salt, pepper, and thyme; cook, stirring occasionally, until
-                flavors combine, 6 to 8 minutes.
-              </p>
-            </li>
-            <li className={styles.stepItem}>
-              <p className={styles.step}>
-                Scrape squash flesh into the skillet; mix into the beef mixture.
-                Spoon into a large casserole dish. Fold in mozzarella cheese;
-                top with crushed crackers.
-              </p>
-            </li>
-            <li className={styles.stepItem}>
-              <p className={styles.step}>
-                Bake in the preheated oven until golden brown, about 40 minutes.
-              </p>
-            </li>
-          </ul>
-          <section className={styles.notes}>
-            <h1 className={styles.sectionTitle}>Notes</h1>
-            <div className={styles.note}>
-              <InformationCircleIcon />
-              <p>
-                <span className={styles.ingredientNote}>Cashews:</span> If your
-                blender can’t blend raw cashews to a smooth consistency, soak
-                them in boiling water for 10 minutes to soften them before
-                blending. Make sure to drain the soaking water before adding to
-                the blender.
-              </p>
-            </div>
-          </section>
-          <div className={styles.controls}>
-            <button className={styles.button}>Print</button>
+    <div className={styles.pageContainer}>
+      <div className={styles.pageWrapper}>
+        <header className={styles.pageHeader}>
+          <div className={styles.breadcrumbsContainer}>
+            <ul className={styles.breadcrumbsList}>
+              <li className={styles.breadcrumbsListItem}>
+                <Link href="/">
+                  <a
+                    className={classNames(
+                      styles.breadcrumbsLink,
+                      styles.breadcrumbsLinkRoot
+                    )}
+                  >
+                    Recipes
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.breadcrumbsDividerContainer}>
+                <span className={styles.breadcrumbsDivider}>/</span>
+              </li>
+              <li className={styles.breadcrumbsListItem}>
+                <Link href="/">
+                  <a className={styles.breadcrumbsLink}>Dinner</a>
+                </Link>
+              </li>
+            </ul>
           </div>
-        </main>
 
-        <aside className={styles.ingredients}>
-          <h1 className={styles.sectionTitle}>Ingredients</h1>
-          <ul className={styles.ingredientsList}>
-            <li className={styles.ingredientsItem}>
-              <p className={styles.ingredient}>
-                120 grams{" "}
-                <span className={styles.ingredientName}>unsalted butter</span>
-                <span className={styles.ingredientState}>softened</span>
-              </p>
-            </li>
-            <li className={styles.ingredientsItem}>
-              <p className={styles.ingredient}>
-                85 grams{" "}
-                <span className={styles.ingredientName}>light brown sugar</span>
-              </p>
-            </li>
-            <li className={styles.ingredientsItem}>
-              <p className={styles.ingredient}>
-                85 grams{" "}
-                <span className={styles.ingredientName}>
-                  golden caster sugar
-                </span>
-              </p>
-            </li>
-            <li className={styles.ingredientsItem}>
-              <p className={styles.ingredient}>
-                1 <span className={styles.ingredientName}>medium egg</span>
-              </p>
-            </li>
-          </ul>
-        </aside>
+          <div className={styles.pageHeading}>
+            <h1 className={styles.pageTitle}>Chicken &amp; Veggie Stir-Fry</h1>
+            <p className={styles.pageDescription}>
+              Getting take-out is a crave-worthy indulgence. And with our easy
+              chicken veggie stir fry recipe, you can recreate the magic of a
+              Chinese takeout right in your very own kitchen. Feel free to mix
+              up the protein or vegetables depending on what you have in your
+              fridge. The simple sauce packs a flavor punch that will bring the
+              dish together, no matter what.
+            </p>
+          </div>
+
+          <div className={styles.pageMeta}>
+            <ul className={styles.metaList}>
+              <li className={styles.metaListItem}>
+                <h2>Total time</h2>
+                <span>32 mins</span>
+              </li>
+              <li className={styles.metaListItem}>
+                <h2>Prep time</h2>
+                <span>20 mins</span>
+              </li>
+              <li className={styles.metaListItem}>
+                <h2>Cook time</h2>
+                <span>12 mins</span>
+              </li>
+              <li className={styles.metaListItem}>
+                <h2>Serves</h2>
+                <span>6</span>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div className={styles.contentContainer}>
+          <aside className={styles.asideContent}>
+            <h2 className={styles.asideTitle}>Ingredients</h2>
+            <div className={styles.ingredientGroup}>
+              <ul className={styles.ingredientList}>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>1 lb</span>
+                    <span className={styles.ingredientName}>
+                      Chicken Breast
+                      <br />
+                      <span className={styles.ingredientModifier}>Cubed</span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}></span>
+                    <span className={styles.ingredientName}>
+                      Salt
+                      <br />
+                      <span className={styles.ingredientModifier}>
+                        To taste
+                      </span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}></span>
+                    <span className={styles.ingredientName}>
+                      Pepper
+                      <br />
+                      <span className={styles.ingredientModifier}>
+                        To taste
+                      </span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>1 lb</span>
+                    <span className={styles.ingredientName}>
+                      Broccoli Florets
+                      <br />
+                      <span className={styles.ingredientModifier}></span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>8 oz</span>
+                    <span className={styles.ingredientName}>
+                      Mushrooms
+                      <br />
+                      <span className={styles.ingredientModifier}>Sliced</span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>
+                      3 tablespoons
+                    </span>
+                    <span className={styles.ingredientName}>
+                      Oil
+                      <br />
+                      <span className={styles.ingredientModifier}>
+                        For frying
+                      </span>
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.ingredientGroup}>
+              <h3 className={styles.ingredientGroupHeading}>Sauce</h3>
+              <ul className={styles.ingredientList}>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>3</span>
+                    <span className={styles.ingredientName}>
+                      Garlic Cloves
+                      <br />
+                      <span className={styles.ingredientModifier}>Minced</span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>
+                      1 tablespoon
+                    </span>
+                    <span className={styles.ingredientName}>
+                      Ginger
+                      <br />
+                      <span className={styles.ingredientModifier}>Minced</span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>
+                      2 teaspoons
+                    </span>
+                    <span className={styles.ingredientName}>
+                      Sesame Oil
+                      <br />
+                      <span className={styles.ingredientModifier}></span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>1/3 cup</span>
+                    <span className={styles.ingredientName}>
+                      Soy Sauce
+                      <br />
+                      <span className={styles.ingredientModifier}>
+                        Reduced sodium
+                      </span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>
+                      1 tablespoon
+                    </span>
+                    <span className={styles.ingredientName}>
+                      Brown Sugar
+                      <br />
+                      <span className={styles.ingredientModifier}>
+                        Reduced sodium
+                      </span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>1 cup</span>
+                    <span className={styles.ingredientName}>
+                      Chicken Broth
+                      <br />
+                      <span className={styles.ingredientModifier}></span>
+                    </span>
+                  </span>
+                </li>
+                <li className={styles.ingredientListItem}>
+                  <span className={styles.ingredient}>
+                    <span className={styles.ingredientQuantity}>1/4 cup</span>
+                    <span className={styles.ingredientName}>
+                      Flour
+                      <br />
+                      <span className={styles.ingredientModifier}></span>
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <main className={styles.mainContent}>
+            <h2 className={styles.mainTitle}>Preparation</h2>
+            <div className={styles.preparationContainter}>
+              <ol className={styles.preparationList}>
+                <li className={styles.preparationListItem}>
+                  <h3 className={styles.preparationHeading}>Step 1</h3>
+                  <p className={styles.preparationText}>
+                    In a large pan on medium-high heat, add 1 tablespoon of oil.
+                    Once the oil is hot, add chicken, season with salt and
+                    pepper, and sauté until cooked through and browned. Remove
+                    cooked chicken from pan and set aside.
+                  </p>
+                </li>
+                <li className={styles.preparationListItem}>
+                  <h3 className={styles.preparationHeading}>Step 2</h3>
+                  <p className={styles.preparationText}>
+                    In the same pan, heat 1 tablespoon of oil and add mushrooms.
+                    When the mushrooms start to soften, add broccoli florets and
+                    stir-fry until the broccoli is tender. Remove cooked
+                    mushrooms and broccoli from the pan and set aside.
+                  </p>
+                </li>
+                <li className={styles.preparationListItem}>
+                  <h3 className={styles.preparationHeading}>Step 3</h3>
+                  <p className={styles.preparationText}>
+                    Add 1 tablespoon of oil to the pan and sauté garlic and
+                    ginger until fragrant. Add the remaining sauce ingredients
+                    and stir until smooth.
+                  </p>
+                </li>
+                <li className={styles.preparationListItem}>
+                  <h3 className={styles.preparationHeading}>Step 4</h3>
+                  <p className={styles.preparationText}>
+                    Return the chicken and vegetables to the saucy pan, stir
+                    until heated through.
+                  </p>
+                </li>
+                <li className={styles.preparationListItem}>
+                  <h3 className={styles.preparationHeading}>Step 5</h3>
+                  <p className={styles.preparationText}>
+                    Serve with hot rice or noodles.
+                  </p>
+                </li>
+              </ol>
+            </div>
+            <div className={styles.noteContainer}>
+              <h2 className={styles.noteTitle}>Notes</h2>
+              <ul className={styles.noteList}>
+                <li className={styles.noteListItem}>
+                  <span className={styles.noteIcon}>
+                    <InformationCircleIcon />
+                  </span>
+                  <p className={styles.noteText}>
+                    <span className={styles.noteIngredient}>
+                      Chicken Broth:
+                    </span>{" "}
+                    If you don’t have chicken broth you can use a chicken
+                    bouillon cube and water. 1 cup of water to one bouillon
+                    cube.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </main>
+        </div>
       </div>
     </div>
   );
