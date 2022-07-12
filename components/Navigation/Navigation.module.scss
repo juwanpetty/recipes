@@ -1,16 +1,13 @@
 @import "styles/base/typography";
 
-.navContainer {
-}
-
 .navInnerContainer {
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
+  padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
 }
 
 .leftNav,
@@ -28,7 +25,27 @@
 
 .link {
   @extend %text-base;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 640px) {
+  .logoMobile {
+    display: inherit;
+  }
+
+  .logoDesktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .logoMobile {
+    display: none;
+  }
+
+  .logoDesktop {
+    display: inherit;
+  }
 }

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
 import { Listbox } from "@headlessui/react";
 import {
   CheckIcon,
-  SunIcon,
-  MoonIcon,
   DesktopComputerIcon,
+  MoonIcon,
+  SunIcon,
 } from "@heroicons/react/outline";
-import useThemeSwitcher from "./useThemeSwitcher";
+import React, { useState } from "react";
 
 import styles from "./ThemeSwitcher.module.scss";
+import useThemeSwitcher from "./useThemeSwitcher";
 
 type ThemeSwitcherProps = {};
 
