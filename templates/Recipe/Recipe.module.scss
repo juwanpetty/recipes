@@ -7,9 +7,6 @@
 
 .pageWrapper {
   margin: 120px 0;
-  // display: flex;
-  // flex-direction: column;
-  // row-gap: 96px;
 }
 
 .pageHeader {
@@ -56,12 +53,12 @@
   .pageTitle {
     margin-bottom: 12px;
     font-family: "Quincy CF";
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 400;
   }
 
   .pageDescription {
-    width: 75ch;
+    max-width: 75ch;
     font-size: 16px;
     line-height: 1.7;
   }
@@ -108,7 +105,6 @@
   margin-bottom: 40px;
 
   .ingredientGroupHeading {
-    // font-size: 16px;
     font-weight: 500;
     margin-bottom: 8px;
   }
@@ -138,7 +134,6 @@
   }
 
   .ingredientModifier {
-    // font-family: "Quincy CF";
     font-style: italic;
     opacity: 0.6;
   }
@@ -161,25 +156,8 @@
 
 .preparationList {
   .preparationListItem {
-    // display: flex;
     margin-bottom: 32px;
     counter-increment: step-counter;
-
-    // &::before {
-    //   content: counter(step-counter);
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   margin-right: 16px;
-    //   width: 32px;
-    //   min-width: 32px;
-    //   height: 32px;
-    //   min-height: 32px;
-    //   border-radius: 100%;
-    //   border: 2px solid black;
-    //   font-size: 14px;
-    //   font-weight: 500;
-    // }
   }
 
   .preparationHeading {
@@ -205,12 +183,13 @@
 .noteList {
   .noteListItem {
     position: relative;
-    width: 56ch;
+    max-width: 56ch;
     padding: 24px;
     padding-left: 48px;
     margin-bottom: 48px;
     background: #f7f7f7;
     border-radius: 6px;
+    clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
   }
 
   .noteIcon {
