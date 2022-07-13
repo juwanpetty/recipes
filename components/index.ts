@@ -1,5 +1,4 @@
-import Navigation from "./Navigation/Navigation";
 import Layout from "./Layout/Layout";
-import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher";
+import Navigation from "./Navigation/Navigation";
 
-export { Navigation, Layout, ThemeSwitcher };
+export { Navigation, Layout };

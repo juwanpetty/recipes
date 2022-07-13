@@ -1,4 +1,4 @@
-import { ThemeSwitcher } from "components";
+import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,8 +6,7 @@ import React from "react";
 import styles from "./Navigation.module.scss";
 
 const navigation = [
-  { name: "All recipes", href: "#", current: true },
-  { name: "Blog", href: "#", current: false },
+  { name: "Recipes", href: "/recipe", current: true },
   { name: "About", href: "#", current: false },
 ];
 
@@ -53,8 +52,13 @@ const Navigation = () => {
               </Link>
             ))}
           </nav>
-
-          <ThemeSwitcher />
+          <div className={styles.searchIconContainer}>
+            <Link href="/search">
+              <a className={styles.searchIcon}>
+                <SearchIcon />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
