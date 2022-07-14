@@ -249,7 +249,6 @@ const Recipe = () => {
             <div className={styles.preparationContainter}>
               <ol className={styles.preparationList}>
                 <li className={styles.preparationListItem}>
-                  <h3 className={styles.preparationHeading}>Step 1</h3>
                   <p className={styles.preparationText}>
                     In a large pan on medium-high heat, add 1 tablespoon of oil.
                     Once the oil is hot, add chicken, season with salt and
@@ -258,7 +257,6 @@ const Recipe = () => {
                   </p>
                 </li>
                 <li className={styles.preparationListItem}>
-                  <h3 className={styles.preparationHeading}>Step 2</h3>
                   <p className={styles.preparationText}>
                     In the same pan, heat 1 tablespoon of oil and add mushrooms.
                     When the mushrooms start to soften, add broccoli florets and
@@ -267,7 +265,6 @@ const Recipe = () => {
                   </p>
                 </li>
                 <li className={styles.preparationListItem}>
-                  <h3 className={styles.preparationHeading}>Step 3</h3>
                   <p className={styles.preparationText}>
                     Add 1 tablespoon of oil to the pan and sauté garlic and
                     ginger until fragrant. Add the remaining sauce ingredients
@@ -275,14 +272,12 @@ const Recipe = () => {
                   </p>
                 </li>
                 <li className={styles.preparationListItem}>
-                  <h3 className={styles.preparationHeading}>Step 4</h3>
                   <p className={styles.preparationText}>
                     Return the chicken and vegetables to the saucy pan, stir
                     until heated through.
                   </p>
                 </li>
                 <li className={styles.preparationListItem}>
-                  <h3 className={styles.preparationHeading}>Step 5</h3>
                   <p className={styles.preparationText}>
                     Serve with hot rice or noodles.
                   </p>
@@ -308,6 +303,57 @@ const Recipe = () => {
               </ul>
             </div>
           </main>
+        </div>
+        <div className={styles.moreRecipes}>
+          <div className={styles.moreRecipesHeader}>
+            <h4>More recipes</h4>
+          </div>
+          <div className={styles.moreRecipesGrid}>
+            <article className={styles.moreRecipesGridItem}>
+              <Link href="/">
+                <a>
+                  <span className={styles.postMeta}>6 JULY, 2022</span>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <h3 className={styles.postTitle}>
+                    Whipped feta &amp; griddled watermelon salad
+                  </h3>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <p className={styles.postDescription}>
+                    What could be a better starter for a summer lunch in the
+                    garden than whipped feta combined with...
+                  </p>
+                </a>
+              </Link>
+            </article>
+            <article className={styles.moreRecipesGridItem}>
+              <Link href="/">
+                <a>
+                  <span className={styles.postMeta}>10 MAY, 2022</span>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <h3 className={styles.postTitle}>
+                    Saffron aioli with asparagus, jerseys & peas
+                  </h3>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <p className={styles.postDescription}>
+                    Could there be a lunch more spring-like than the combination
+                    of orange juice-hued yolks against spring...
+                  </p>
+                </a>
+              </Link>
+            </article>
+          </div>
         </div>
       </div>
     </div>

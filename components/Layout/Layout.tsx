@@ -1,4 +1,4 @@
-import { Navigation } from "components";
+import { CustomCursor, Footer, Navigation } from "components";
 import React from "react";
 
 import styles from "./Layout.module.scss";
@@ -9,11 +9,14 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className={styles.container}>
-      <Navigation />
-      <div className={styles.content}>{children}</div>
-      {/* Footer */}
-    </div>
+    <>
+      {/* <CustomCursor /> */}
+      <div className={styles.container}>
+        <Navigation />
+        <div className={styles.content}>{children}</div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
