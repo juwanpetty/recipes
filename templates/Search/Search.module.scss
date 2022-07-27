@@ -10,7 +10,7 @@
 }
 
 .pageHeader {
-  margin-bottom: 96px;
+  margin-bottom: 54px;
 }
 
 .breadcrumbsContainer {
@@ -77,4 +77,15 @@
 
 .postGridContainer {
   display: grid;
+}
+
+.postItem {
+  padding: 16px 4px;
+  border-bottom: 1px solid #ceccca;
+  color: #352914;
+}
+
+.postItemTitle {
+  font-size: 18px;
+  font-weight: 500;
 }

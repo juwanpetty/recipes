@@ -60,7 +60,33 @@ const Search = () => {
           </form>
         </header>
         <main className={styles.postGridContainer}>
-          Grid of recipes go here
+          <Link href="">
+            <a>
+              <article className={styles.postItem}>
+                <h2 className={styles.postItemTitle}>
+                  Lesson 01: Create Forms that Convert
+                </h2>
+              </article>
+            </a>
+          </Link>
+          <Link href="">
+            <a>
+              <article className={styles.postItem}>
+                <h2 className={styles.postItemTitle}>
+                  Lesson 01: Create Forms that Convert
+                </h2>
+              </article>
+            </a>
+          </Link>
+          <Link href="">
+            <a>
+              <article className={styles.postItem}>
+                <h2 className={styles.postItemTitle}>
+                  Lesson 01: Create Forms that Convert
+                </h2>
+              </article>
+            </a>
+          </Link>
         </main>
       </div>
     </div>
