@@ -6,7 +6,7 @@
 }
 
 .pageWrapper {
-  margin: 120px 0;
+  margin: 120px 0 0;
 }
 
 .pageHeader {
@@ -64,62 +64,55 @@
 }
 
 .postGridContainer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  // padding-top: 24px;
 }
 
 .postItem {
-  display: flex;
-  column-gap: 36px;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  padding: 16px 4px;
+  border-bottom: 1px solid #ceccca;
+  color: #352914;
+}
 
-  &:last-of-type {
-    border-bottom: none;
+.postItemTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.linkGroup {
+  margin-bottom: 56px;
+}
+
+.linkGroupHeader {
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #8f8e8b;
+}
+
+.linkGroupList {
+}
+
+.linkGroupItem {
+  margin-bottom: 14px;
+  color: #8f8e8b;
+
+  &:first-child {
+    font-weight: 500;
+    color: black;
   }
+}
 
-  .postCategory {
-    margin-top: 4px;
-    align-self: flex-start;
-    font-family: "IBM Plex Mono";
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    font-size: 14px;
-    opacity: 0.7;
-  }
+.contentContainer {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  column-gap: 64px;
+}
 
-  .postTitle {
-    font-family: "Quincy CF";
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 32px;
-    margin-bottom: 12px;
-  }
-
-  .postDescription {
-    max-width: 75ch;
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 24px;
-  }
-
-  .postReadMore {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    // font-weight: 500;
-
-    .readMoreIconContainer {
-      margin-left: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-
-      svg {
-        width: 20px;
-        height: 24px;
-      }
-    }
-  }
+.aside {
+  padding-top: 20px;
 }

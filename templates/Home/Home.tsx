@@ -1,4 +1,3 @@
-import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
 import type { NextPage } from "next";
 import Link from "next/link";
 
@@ -18,163 +17,146 @@ const Home: NextPage = () => {
             </p>
           </div>
         </header>
-        <main className={styles.postGridContainer}>
-          <article className={styles.postItem}>
-            <Link href="/recipe">
-              <a className={styles.postCategory}>Common Care Questions</a>
-            </Link>
-            <div>
-              <Link href="/recipe">
-                <a>
-                  <h2 className={styles.postTitle}>
-                    How to Fertilize Your Houseplants
-                  </h2>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a>
-                  <p className={styles.postDescription}>
-                    Getting take-out is a crave-worthy indulgence. And with our
-                    easy chicken veggie stir fry recipe, you can recreate the
-                    magic of a Chinese takeout right in your very own kitchen.
-                  </p>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a className={styles.postReadMore}>
-                  Read more{" "}
-                  <span className={styles.readMoreIconContainer}>
-                    <ArrowNarrowRightIcon />
-                  </span>
-                </a>
-              </Link>
+        <div className={styles.contentContainer}>
+          <aside className={styles.aside}>
+            <div className={styles.linkGroup}>
+              <h3 className={styles.linkGroupHeader}>Categories</h3>
+              <ul className={styles.linkGroupList}>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>All</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Breakfast</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Dinner</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Soups</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Desserts</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Drinks</a>
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </article>
-          <article className={styles.postItem}>
-            <Link href="/recipe">
-              <a className={styles.postCategory}>Common Care Questions</a>
-            </Link>
-            <div>
-              <Link href="/recipe">
-                <a>
-                  <h2 className={styles.postTitle}>
-                    How to Fertilize Your Houseplants
-                  </h2>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a>
-                  <p className={styles.postDescription}>
-                    Getting take-out is a crave-worthy indulgence. And with our
-                    easy chicken veggie stir fry recipe, you can recreate the
-                    magic of a Chinese takeout right in your very own kitchen.
-                  </p>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a className={styles.postReadMore}>
-                  Read more{" "}
-                  <span className={styles.readMoreIconContainer}>
-                    <ArrowNarrowRightIcon />
-                  </span>
-                </a>
-              </Link>
+            <div className={styles.linkGroup}>
+              <h3 className={styles.linkGroupHeader}>Tags</h3>
+              <ul className={styles.linkGroupList}>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>All</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Breakfast</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Dinner</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Soups</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Desserts</a>
+                  </Link>
+                </li>
+                <li className={styles.linkGroupItem}>
+                  <Link href="/">
+                    <a>Drinks</a>
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </article>
-          <article className={styles.postItem}>
-            <Link href="/recipe">
-              <a className={styles.postCategory}>Common Care Questions</a>
-            </Link>
-            <div>
-              <Link href="/recipe">
-                <a>
-                  <h2 className={styles.postTitle}>
-                    How to Fertilize Your Houseplants
+          </aside>
+
+          <main className={styles.postGridContainer}>
+            <Link href="">
+              <a>
+                <article className={styles.postItem}>
+                  <h2 className={styles.postItemTitle}>
+                    Lesson 01: Create Forms that Convert
                   </h2>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a>
-                  <p className={styles.postDescription}>
-                    Getting take-out is a crave-worthy indulgence. And with our
-                    easy chicken veggie stir fry recipe, you can recreate the
-                    magic of a Chinese takeout right in your very own kitchen.
-                  </p>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a className={styles.postReadMore}>
-                  Read more{" "}
-                  <span className={styles.readMoreIconContainer}>
-                    <ArrowNarrowRightIcon />
-                  </span>
-                </a>
-              </Link>
-            </div>
-          </article>
-          <article className={styles.postItem}>
-            <Link href="/recipe">
-              <a className={styles.postCategory}>Common Care Questions</a>
+                </article>
+              </a>
             </Link>
-            <div>
-              <Link href="/recipe">
-                <a>
-                  <h2 className={styles.postTitle}>
-                    How to Fertilize Your Houseplants
+            <Link href="">
+              <a>
+                <article className={styles.postItem}>
+                  <h2 className={styles.postItemTitle}>
+                    Lesson 01: Create Forms that Convert
                   </h2>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a>
-                  <p className={styles.postDescription}>
-                    Getting take-out is a crave-worthy indulgence. And with our
-                    easy chicken veggie stir fry recipe, you can recreate the
-                    magic of a Chinese takeout right in your very own kitchen.
-                  </p>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a className={styles.postReadMore}>
-                  Read more{" "}
-                  <span className={styles.readMoreIconContainer}>
-                    <ArrowNarrowRightIcon />
-                  </span>
-                </a>
-              </Link>
-            </div>
-          </article>
-          <article className={styles.postItem}>
-            <Link href="/recipe">
-              <a className={styles.postCategory}>Common Care Questions</a>
+                </article>
+              </a>
             </Link>
-            <div>
-              <Link href="/recipe">
-                <a>
-                  <h2 className={styles.postTitle}>
-                    How to Fertilize Your Houseplants
+            <Link href="">
+              <a>
+                <article className={styles.postItem}>
+                  <h2 className={styles.postItemTitle}>
+                    Lesson 01: Create Forms that Convert
                   </h2>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a>
-                  <p className={styles.postDescription}>
-                    Getting take-out is a crave-worthy indulgence. And with our
-                    easy chicken veggie stir fry recipe, you can recreate the
-                    magic of a Chinese takeout right in your very own kitchen.
-                  </p>
-                </a>
-              </Link>
-              <Link href="/recipe">
-                <a className={styles.postReadMore}>
-                  Read more{" "}
-                  <span className={styles.readMoreIconContainer}>
-                    <ArrowNarrowRightIcon />
-                  </span>
-                </a>
-              </Link>
-            </div>
-          </article>
-        </main>
+                </article>
+              </a>
+            </Link>
+            <Link href="">
+              <a>
+                <article className={styles.postItem}>
+                  <h2 className={styles.postItemTitle}>
+                    Lesson 01: Create Forms that Convert
+                  </h2>
+                </article>
+              </a>
+            </Link>
+            <Link href="">
+              <a>
+                <article className={styles.postItem}>
+                  <h2 className={styles.postItemTitle}>
+                    Lesson 01: Create Forms that Convert
+                  </h2>
+                </article>
+              </a>
+            </Link>
+            <Link href="">
+              <a>
+                <article className={styles.postItem}>
+                  <h2 className={styles.postItemTitle}>
+                    Lesson 01: Create Forms that Convert
+                  </h2>
+                </article>
+              </a>
+            </Link>
+            <Link href="">
+              <a>
+                <article className={styles.postItem}>
+                  <h2 className={styles.postItemTitle}>
+                    Lesson 01: Create Forms that Convert
+                  </h2>
+                </article>
+              </a>
+            </Link>
+          </main>
+        </div>
       </div>
     </div>
   );

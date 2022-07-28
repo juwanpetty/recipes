@@ -29,21 +29,6 @@ const Recipe = () => {
               </li>
               <li className={styles.breadcrumbsListItem}>
                 <Link href="/">
-                  <a
-                    className={classNames(
-                      styles.breadcrumbsLink,
-                      styles.breadcrumbsLinkRoot
-                    )}
-                  >
-                    Recipes
-                  </a>
-                </Link>
-              </li>
-              <li className={styles.breadcrumbsDividerContainer}>
-                <span className={styles.breadcrumbsDivider}>/</span>
-              </li>
-              <li className={styles.breadcrumbsListItem}>
-                <Link href="/">
                   <a className={styles.breadcrumbsLink}>Dinner</a>
                 </Link>
               </li>
